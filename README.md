@@ -38,7 +38,7 @@ Supabase PostgreSQL Database
 
 ---
 
-## Quick Access link: https://amarnathks1234-ui.github.io/NEXORA./
+## Quick Access link: https://amarnathks1234-ui.github.io/GENZ/
 
 ## 🚀 Quick Start
 
