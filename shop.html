@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products | GENZ Collection</title>
+    <meta name="description"
+        content="Browse the complete catalog of luxury lifestyle items, audio gadgets, designer accessories, chronometers, and footwear at GENZ.">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Clerk JS SDK -->
+    <script async crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_c2luZ3VsYXItbGlvbmZpc2gtNDMwNS5jbGVyay5hY2NvdW50cy5kZXYk"
+        src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@5/dist/clerk.browser.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!--========== HEADER / NAVBAR ==========-->
+    <header id="mainHeader">
+        <nav class="navbar">
+            <!-- Left: Fashion Categories (Desktop) / Hamburger Menu (Mobile) -->
+            <div class="nav-left">
+                <button class="menu-btn" type="button" aria-label="Toggle navigation" title="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-categories">
+                    <li><a href="shop.html?category=fashion">MEN</a></li>
+                    <li><a href="shop.html?category=fashion">WOMEN</a></li>
+                    <li><a href="shop.html?category=accessories">KIDS</a></li>
+                    <li><a href="shop.html?category=beauty">BEAUTY</a></li>
+                </ul>
+            </div>
+
+            <!-- Center: Brand Logo -->
+            <div class="nav-center">
+                <a href="index.html" class="logo">GENZ</a>
+            </div>
+
+            <!-- Right: Action Links (Search, Login, Wishlist, Cart) -->
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <a href="#" class="nav-action-link search-trigger" aria-label="Search" title="Search catalog">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="nav-action-text">SEARCH</span>
+                    </a>
+                    <div id="clerkAuthDesktop" class="nav-auth-container">
+                        <a href="login.html" id="desktopAuthLink" class="nav-action-link" aria-label="User Account"
+                            title="My Account">
+                            <i class="fa-regular fa-user"></i>
+                            <span class="nav-action-text" id="desktopAuthText">LOGIN</span>
+                        </a>
+                        <div id="clerkUserButtonDesktop" class="clerk-user-button-slot" style="display: none;"></div>
+                    </div>
+                    <a href="wishlist.html" class="nav-action-link wishlist-link" aria-label="Wishlist"
+                        title="View Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="nav-action-text">WISHLIST</span>
+                        <span class="wishlist-badge wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="nav-action-link cart-link cart-icon" aria-label="Shopping Cart"
+                        title="View Cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="nav-action-text">CART (<span class="cart-count">0</span>)</span>
+                        <span class="cart-badge cart-count mobile-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slide-out Mobile Navigation Drawer & Backdrop -->
+        <div class="nav-backdrop-overlay" id="navBackdrop"></div>
+        <aside class="nav-menu" id="mobileDrawer" aria-label="Mobile Navigation Menu">
+            <div class="drawer-top-bar">
+                <span class="drawer-brand">GENZ</span>
+                <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- User Status Card if Logged In -->
+            <div class="drawer-user-card" id="drawerUserCard" style="display: none;">
+                <div class="drawer-avatar" id="drawerAvatar"><i class="fa-solid fa-crown"></i></div>
+                <div class="drawer-user-info" id="drawerUserInfo">
+                    <strong id="drawerUserName">GENZ Member</strong>
+                    <small id="drawerUserSub">Luxury Lifestyle & Tech</small>
+                </div>
+            </div>
+
+            <div class="drawer-section">
+                <span class="drawer-section-title">COLLECTIONS</span>
+                <ul class="drawer-list">
+                    <li><a href="shop.html?category=fashion"><span>MEN</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="shop.html?category=fashion"><span>WOMEN</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="shop.html?category=accessories"><span>KIDS</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="shop.html?category=beauty"><span>BEAUTY</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-section">
+                <span class="drawer-section-title">EXPLORE</span>
+                <ul class="drawer-list">
+                    <li><a href="index.html"><span>Home</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="shop.html"><span>Shop All</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="about.html"><span>About GENZ</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="contact.html"><span>Contact Concierge</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-section">
+                <span class="drawer-section-title">MY ACCOUNT</span>
+                <ul class="drawer-list">
+                    <li><a href="login.html" id="drawerAuthLink"><span id="drawerAuthText">Login / Register</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="wishlist.html"><span>Saved Wishlist (<span class="wishlist-count">0</span>)</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="cart.html"><span>Shopping Bag (<span class="cart-count">0</span>)</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-footer">
+                <div class="drawer-social-row">
+                    <a href="https://instagram.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/amarrr.ey" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/amarnathks2005" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </aside>
+    </header>
+
+    <!--========== SHOP HERO ==========-->
+    <section class="shop-hero">
+        <div class="container" style="max-width:800px;">
+            <span class="section-label">CURATED MASTER COLLECTION</span>
+            <h1 style="font-size:42px; font-weight:800; margin:10px 0 12px; letter-spacing:-0.5px;">
+                Explore Our <span style="color:#60a5fa;">Store Catalog</span>
+            </h1>
+            <p style="color:#94a3b8; font-size:16px;">
+                Discover handcrafted chronometers, premium wireless acoustics, Italian leather goods, and refined home
+                essentials.
+            </p>
+        </div>
+    </section>
+
+    <!--========== SHOP SECTION ==========-->
+    <main class="shop-section">
+        <div class="container">
+
+            <!-- Category Filter Tabs -->
+            <div class="category-filter-bar">
+                <button class="category-btn active" data-category="all">
+                    <i class="fa-solid fa-border-all"></i> All Products
+                </button>
+                <button class="category-btn" data-category="accessories">
+                    <i class="fa-solid fa-clock"></i> Accessories & Watches
+                </button>
+                <button class="category-btn" data-category="electronics">
+                    <i class="fa-solid fa-laptop"></i> Electronics & Audio
+                </button>
+                <button class="category-btn" data-category="fashion">
+                    <i class="fa-solid fa-shirt"></i> Designer Fashion
+                </button>
+                <button class="category-btn" data-category="footwear">
+                    <i class="fa-solid fa-shoe-prints"></i> Footwear
+                </button>
+                <button class="category-btn" data-category="beauty">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Beauty & Care
+                </button>
+                <button class="category-btn" data-category="home">
+                    <i class="fa-solid fa-house"></i> Home Essentials
+                </button>
+                <button class="category-btn" data-category="bags">
+                    <i class="fa-solid fa-bag-shopping"></i> Bags & Leather
+                </button>
+            </div>
+
+            <!-- Sub-filters Bar -->
+            <div class="shop-sub-filters">
+                <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+                    <div style="position:relative; min-width:240px;">
+                        <i class="fa-solid fa-magnifying-glass"
+                            style="position:absolute; left:14px; top:50%; transform:translateY(-50%); color:#94a3b8; font-size:14px;"></i>
+                        <input type="text" id="shopSearchInput" placeholder="Filter by keyword..."
+                            style="width:100%; padding:10px 14px 10px 38px; border:1px solid #e2e8f0; border-radius:8px; font-size:14px; outline:none; background:#f8fafc;">
+                    </div>
+
+                    <div class="price-filter-chips">
+                        <button class="price-chip active" data-price="all">All Prices</button>
+                        <button class="price-chip" data-price="under50">Under $50</button>
+                        <button class="price-chip" data-price="50to100">$50 - $100</button>
+                        <button class="price-chip" data-price="over100">$100+</button>
+                    </div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <label for="sort" style="font-weight:700; font-size:14px; color:#475569;">Sort by:</label>
+                    <select id="sort"
+                        style="padding:10px 16px; border-radius:8px; border:1px solid #e2e8f0; font-size:14px; font-weight:600; background:#fff; color:#0f172a; cursor:pointer; outline:none;">
+                        <option value="default">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="new">Newest Arrivals</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Heading with item count -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px;">
+                <h2 id="catalogTitle" style="font-size:24px; font-weight:800; color:#0f172a;">All Products</h2>
+                <span style="font-size:14px; color:#64748b; font-weight:600;">Showing premium verified inventory</span>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="shop-products" style="margin-bottom:80px;">
+                <!-- Populated dynamically by script.js -->
+            </div>
+
+        </div>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    GENZ<span style="color:#2563eb;">.</span>
+                </a>
+                <p>
+                    Your premier global destination for luxury lifestyle products, cutting-edge audio, artisan leather
+                    accessories, and modern home essentials.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/amarnathks2005" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop Catalog</a></li>
+                    <li><a href="about.html">About Brand</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="wishlist.html">My Wishlist</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="cart.html">View Cart</a></li>
+                    <li><a href="checkout.html">Track Order</a></li>
+                    <li><a href="login.html">My Account</a></li>
+                    <li><a href="about.html#faq">Shipping & Returns</a></li>
+                    <li><a href="contact.html">Help Concierge</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3>Global Headquarters</h3>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Iritty, Kannur, Kerala, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:support@genz.com">support@genz.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+917306489636">+91 7306489636</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 GENZ Inc. All Rights Reserved. Engineered for luxury living.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Security Guarantee</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Scripts -->
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
