@@ -462,6 +462,10 @@
         color: #000000;
     }
 
+    .hero-brand-right {
+        transform: translateX(0.1cm);
+    }
+
     .hero-cta-row {
         display: flex;
         flex-direction: row;
