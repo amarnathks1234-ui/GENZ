@@ -371,12 +371,12 @@
 
     .hero-character-wrap {
         left: 0;
-        bottom: calc(56px + 8px + 3cm);
+        bottom: calc(56px + 8px + 2cm);
         z-index: 5;
     }
 
     .hero-character-shadow {
-        bottom: calc(56px + 8px + 3cm - 4px);
+        bottom: calc(56px + 8px + 2cm - 4px);
         width: 250px;
         height: 20px;
     }
@@ -1226,7 +1226,7 @@
 ================================================== */
 @media (max-width: 480px) {
     .hero-character-wrap {
-        bottom: calc(56px + 6px + 3cm);
+        bottom: calc(56px + 6px + 2cm);
     }
 
     .hero-character-shadow {
