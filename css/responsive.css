@@ -449,6 +449,7 @@
         align-items: baseline;
         width: 100%;
         margin-bottom: clamp(58px, 9vh, 88px);
+        transform: translateY(1cm);
     }
 
     .hero-brand-left,
