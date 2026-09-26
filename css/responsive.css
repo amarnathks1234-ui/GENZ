@@ -348,11 +348,23 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        background: #e9e3d8 url('../Images/hero-bg.jpg') center center / cover no-repeat;
+        background: #e9e3d8;
         padding: 0;
         margin: 0;
         overflow: hidden;
         position: relative;
+    }
+
+    .premium-hero::before {
+        content: '';
+        position: absolute;
+        top: -1cm;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #e9e3d8 url('../Images/hero-bg.jpg') center top / cover no-repeat;
+        pointer-events: none;
+        z-index: 1;
     }
 
     .hero-editorial-frame {
