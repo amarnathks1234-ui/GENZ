@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirts Collection | GENZ Luxury Fashion</title>
+    <meta name="description"
+        content="Discover the GENZ T-Shirts Collection: heavy-gsm cottons, tribal cyber embroidery, collegiate knit textures, and signature oversized silhouettes.">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+    <!-- Clerk JS SDK -->
+    <script async crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_c2luZ3VsYXItbGlvbmZpc2gtNDMwNS5jbGVyay5hY2NvdW50cy5kZXYk"
+        src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@5/dist/clerk.browser.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <!--========== HEADER / NAVBAR ==========-->
+    <header id="mainHeader">
+        <nav class="navbar">
+            <!-- Left: Fashion Categories (Desktop) / Hamburger Menu (Mobile) -->
+            <div class="nav-left">
+                <button class="menu-btn" type="button" aria-label="Toggle navigation" title="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-categories">
+                    <li><a href="../../index.html#categories">MEN</a></li>
+                    <li><a href="../../index.html#categories">WOMEN</a></li>
+                    <li><a href="../../index.html#categories">KIDS</a></li>
+                    <li><a href="../../index.html#categories">BEAUTY</a></li>
+                </ul>
+            </div>
+
+            <!-- Center: Brand Logo -->
+            <div class="nav-center">
+                <a href="../../index.html" class="logo">GENZ</a>
+            </div>
+
+            <!-- Right: Action Links (Search, Login, Wishlist, Cart) -->
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <a href="#" class="nav-action-link search-trigger" aria-label="Search" title="Search catalog">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="nav-action-text">SEARCH</span>
+                    </a>
+                    <div id="clerkAuthDesktop" class="nav-auth-container">
+                        <a href="../../login.html" id="desktopAuthLink" class="nav-action-link" aria-label="User Account"
+                            title="My Account">
+                            <i class="fa-regular fa-user"></i>
+                            <span class="nav-action-text" id="desktopAuthText">LOGIN</span>
+                        </a>
+                        <div id="clerkUserButtonDesktop" class="clerk-user-button-slot" style="display: none;"></div>
+                    </div>
+                    <a href="../../wishlist.html" class="nav-action-link wishlist-link" aria-label="Wishlist"
+                        title="View Wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="nav-action-text">WISHLIST</span>
+                        <span class="wishlist-badge wishlist-count">0</span>
+                    </a>
+                    <a href="../../cart.html" class="nav-action-link cart-link cart-icon" aria-label="Shopping Cart"
+                        title="View Cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="nav-action-text">CART (<span class="cart-count">0</span>)</span>
+                        <span class="cart-badge cart-count mobile-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Slide-out Mobile Navigation Drawer & Backdrop -->
+        <div class="nav-backdrop-overlay" id="navBackdrop"></div>
+        <aside class="nav-menu" id="mobileDrawer" aria-label="Mobile Navigation Menu">
+            <div class="drawer-top-bar">
+                <span class="drawer-brand">GENZ</span>
+                <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- User Status Card if Logged In -->
+            <div class="drawer-user-card" id="drawerUserCard" style="display: none;">
+                <div class="drawer-avatar" id="drawerAvatar"><i class="fa-solid fa-crown"></i></div>
+                <div class="drawer-user-info" id="drawerUserInfo">
+                    <strong id="drawerUserName">GENZ Member</strong>
+                    <small id="drawerUserSub">Luxury Lifestyle & Tech</small>
+                </div>
+            </div>
+
+            <div class="drawer-section">
+                <span class="drawer-section-title">COLLECTIONS</span>
+                <ul class="drawer-list">
+                    <li><a href="../../index.html#categories"><span>MEN</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../index.html#categories"><span>WOMEN</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../index.html#categories"><span>KIDS</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../index.html#categories"><span>BEAUTY</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-section">
+                <span class="drawer-section-title">EXPLORE</span>
+                <ul class="drawer-list">
+                    <li><a href="../../index.html"><span>Home</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../shop/t-shirts/index.html" class="active"><span>T-Shirts</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../wide-leg-pants.html"><span>Wide-Leg Pants</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../about.html"><span>About GENZ</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../contact.html"><span>Contact Concierge</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-section">
+                <span class="drawer-section-title">MY ACCOUNT</span>
+                <ul class="drawer-list">
+                    <li><a href="../../login.html" id="drawerAuthLink"><span id="drawerAuthText">Login / Register</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../wishlist.html"><span>Saved Wishlist (<span class="wishlist-count">0</span>)</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="../../cart.html"><span>Shopping Bag (<span class="cart-count">0</span>)</span><i
+                                class="fa-solid fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-footer">
+                <div class="drawer-social-row">
+                    <a href="https://instagram.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/amarrr.ey" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/amarnathks2005" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </aside>
+    </header>
+
+    <!--========== T-SHIRTS SHOWCASE PAGE ==========-->
+    <main class="tshirts-page">
+        <div class="container">
+
+            <!-- Editorial Breadcrumb -->
+            <div class="tshirts-breadcrumb">
+                <a href="../../index.html">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <a href="../../index.html#categories">Collections</a>
+                <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <span>T-Shirts</span>
+            </div>
+
+            <!-- Collection Header -->
+            <div class="tshirts-header">
+                <h1>T-Shirts <span>Collection</span></h1>
+            </div>
+
+            <!-- Products Grid: 4 columns in 1 row on Desktop; 1 column in 4 rows on Tablet & Mobile -->
+            <div class="tshirts-grid" id="tshirtsGrid">
+
+                <!-- 1. Black Tribal Embroidered Oversized T-Shirt (₹899) -->
+                <article class="tshirts-card" data-id="tshirt-1">
+                    <div class="tshirts-img-box">
+                        <button type="button" class="tshirts-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('tshirt-1'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="../../product.html?id=tshirt-1" onclick="selectProduct('tshirt-1')">
+                            <img src="../../Images/t-shirt 1.png" alt="Black Tribal Embroidered Oversized T-Shirt" class="tshirts-img" fetchpriority="high" loading="eager">
+                        </a>
+                    </div>
+                    <div class="tshirts-body">
+                        <span class="tshirts-category-tag">T-SHIRTS</span>
+                        <h3 class="tshirts-title">
+                            <a href="../../product.html?id=tshirt-1" onclick="selectProduct('tshirt-1')">Black Tribal Embroidered Oversized T-Shirt</a>
+                        </h3>
+                        <div class="tshirts-price-row">
+                            <span class="tshirts-price">₹899</span>
+                            <span class="tshirts-orig-price">₹1,299</span>
+                        </div>
+                        <a href="../../product.html?id=tshirt-1" onclick="selectProduct('tshirt-1')" class="tshirts-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 2. Cream Varsity Embroidered Polo T-Shirt (₹999) -->
+                <article class="tshirts-card" data-id="tshirt-2">
+                    <div class="tshirts-img-box">
+                        <button type="button" class="tshirts-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('tshirt-2'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="../../product.html?id=tshirt-2" onclick="selectProduct('tshirt-2')">
+                            <img src="../../Images/t-shirt 2.png" alt="Cream Varsity Embroidered Polo T-Shirt" class="tshirts-img" loading="eager">
+                        </a>
+                    </div>
+                    <div class="tshirts-body">
+                        <span class="tshirts-category-tag">T-SHIRTS</span>
+                        <h3 class="tshirts-title">
+                            <a href="../../product.html?id=tshirt-2" onclick="selectProduct('tshirt-2')">Cream Varsity Embroidered Polo T-Shirt</a>
+                        </h3>
+                        <div class="tshirts-price-row">
+                            <span class="tshirts-price">₹999</span>
+                            <span class="tshirts-orig-price">₹1,499</span>
+                        </div>
+                        <a href="../../product.html?id=tshirt-2" onclick="selectProduct('tshirt-2')" class="tshirts-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 3. White Graphic Oversized T-Shirt (₹799) -->
+                <article class="tshirts-card" data-id="tshirt-3">
+                    <div class="tshirts-img-box">
+                        <button type="button" class="tshirts-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('tshirt-3'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="../../product.html?id=tshirt-3" onclick="selectProduct('tshirt-3')">
+                            <img src="../../Images/t-shirt 3.png" alt="White Graphic Oversized T-Shirt" class="tshirts-img" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="tshirts-body">
+                        <span class="tshirts-category-tag">T-SHIRTS</span>
+                        <h3 class="tshirts-title">
+                            <a href="../../product.html?id=tshirt-3" onclick="selectProduct('tshirt-3')">White Graphic Oversized T-Shirt</a>
+                        </h3>
+                        <div class="tshirts-price-row">
+                            <span class="tshirts-price">₹799</span>
+                            <span class="tshirts-orig-price">₹1,199</span>
+                        </div>
+                        <a href="../../product.html?id=tshirt-3" onclick="selectProduct('tshirt-3')" class="tshirts-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 4. Black & Cream Patchwork Embroidered T-Shirt (₹1,099) -->
+                <article class="tshirts-card" data-id="tshirt-4">
+                    <div class="tshirts-img-box">
+                        <button type="button" class="tshirts-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('tshirt-4'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="../../product.html?id=tshirt-4" onclick="selectProduct('tshirt-4')">
+                            <img src="../../Images/t-shirt 4.png" alt="Black & Cream Patchwork Embroidered T-Shirt" class="tshirts-img" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="tshirts-body">
+                        <span class="tshirts-category-tag">T-SHIRTS</span>
+                        <h3 class="tshirts-title">
+                            <a href="../../product.html?id=tshirt-4" onclick="selectProduct('tshirt-4')">Black & Cream Patchwork Embroidered T-Shirt</a>
+                        </h3>
+                        <div class="tshirts-price-row">
+                            <span class="tshirts-price">₹1,099</span>
+                            <span class="tshirts-orig-price">₹1,599</span>
+                        </div>
+                        <a href="../../product.html?id=tshirt-4" onclick="selectProduct('tshirt-4')" class="tshirts-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="footer-logo">
+                    GENZ<span style="color:#2563eb;">.</span>
+                </a>
+                <p>
+                    Your premier global destination for luxury lifestyle products, cutting-edge streetwear, artisan leather
+                    accessories, and modern apparel essentials.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/amarnathks2005" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../shop/t-shirts/index.html">T-Shirts</a></li>
+                    <li><a href="../../wide-leg-pants.html">Wide-Leg Pants</a></li>
+                    <li><a href="../../about.html">About Brand</a></li>
+                    <li><a href="../../contact.html">Contact Us</a></li>
+                    <li><a href="../../wishlist.html">My Wishlist</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="../../cart.html">View Cart</a></li>
+                    <li><a href="../../checkout.html">Track Order</a></li>
+                    <li><a href="../../login.html">My Account</a></li>
+                    <li><a href="../../about.html#faq">Shipping & Returns</a></li>
+                    <li><a href="../../contact.html">Help Concierge</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3>Global Headquarters</h3>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Iritty, Kannur, Kerala, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:support@genz.com">support@genz.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+917306489636">+91 7306489636</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 GENZ Inc. All Rights Reserved. Engineered for luxury living.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Security Guarantee</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Scripts -->
+    <script src="../../js/api.js"></script>
+    <script src="../../script.js"></script>
+    <script>
+        // Synchronize wishlist heart states on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof syncWishlistShowcase === 'function') {
+                syncWishlistShowcase();
+            } else {
+                const wishlist = typeof getWishlist === 'function' ? getWishlist() : [];
+                document.querySelectorAll('.tshirts-card').forEach(card => {
+                    const id = card.dataset.id;
+                    const btn = card.querySelector('.tshirts-fav-btn');
+                    if (btn && wishlist.some(i => String(i.id) === String(id))) {
+                        btn.classList.add('active');
+                        const icon = btn.querySelector('i');
+                        if (icon) icon.className = 'fa-solid fa-heart';
+                    }
+                });
+            }
+
+            if (window.location.pathname.endsWith('/shop/t-shirts/index.html')) {
+                history.replaceState(null, '', window.location.pathname.replace(/\/index\.html$/, ''));
+            }
+        });
+    </script>
+</body>
+
+</html>

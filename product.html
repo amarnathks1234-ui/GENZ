@@ -166,7 +166,7 @@
                 style="display:flex; align-items:center; gap:8px; font-size:14px; color:#64748b; margin-bottom:30px; font-weight:500;">
                 <a href="index.html" style="color:#64748b;">Home</a>
                 <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
-                <a href="shop.html" style="color:#64748b;">Shop</a>
+                <a href="wide-leg-pants.html" id="productBreadcrumbShop" style="color:#64748b;">Wide-Leg Pants</a>
                 <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
                 <span id="productCategory"
                     style="color:#2563eb; font-weight:700; text-transform:uppercase;">ACCESSORIES</span>
@@ -207,6 +207,21 @@
                         resistance, and handcrafted genuine Italian leather strap designed for timeless durability.
                     </p>
 
+                    <!-- Size Selector -->
+                    <div class="product-options-box" id="productSizeBox">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <h4 style="margin:0;">Select Size</h4>
+                            <span id="selectedSizeLabel" style="font-size:13px; font-weight:700; color:#2563eb;">Size: 32</span>
+                        </div>
+                        <div class="size-selector-group" id="productSizeGroup">
+                            <button type="button" class="size-pill-btn" data-size="28">28</button>
+                            <button type="button" class="size-pill-btn" data-size="30">30</button>
+                            <button type="button" class="size-pill-btn active" data-size="32">32</button>
+                            <button type="button" class="size-pill-btn" data-size="34">34</button>
+                            <button type="button" class="size-pill-btn" data-size="36">36</button>
+                        </div>
+                    </div>
+
                     <!-- Color Swatches -->
                     <div class="product-options-box">
                         <h4>Select Finish / Color</h4>
@@ -228,12 +243,15 @@
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="product-action-buttons">
-                        <button id="addToCartBtn" class="btn-add-cart" type="button">
+                    <div class="product-action-buttons" style="display:flex; gap:12px; align-items:center;">
+                        <button id="addToCartBtn" class="btn-add-cart" type="button" style="flex:1;">
                             <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                         </button>
-                        <button id="buyNowBtn" class="btn-buy-now" type="button">
+                        <button id="buyNowBtn" class="btn-buy-now" type="button" style="flex:1;">
                             Buy Now <i class="fa-solid fa-bolt" style="margin-left:6px; color:#f59e0b;"></i>
+                        </button>
+                        <button id="productFavBtn" class="btn-fav" type="button" aria-label="Save to Wishlist" style="width:52px; height:52px; border-radius:12px; border:1.5px solid #e2e8f0; background:#fff; color:#0f172a; font-size:20px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s ease;">
+                            <i class="fa-regular fa-heart"></i>
                         </button>
                     </div>
 

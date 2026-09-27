@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENZ | Luxury Lifestyle & Tech Essentials</title>
+    <title>Wide-Leg Pants Collection | GENZ Luxury Fashion</title>
     <meta name="description"
-        content="Discover premium lifestyle products, luxury watches, high-fidelity audio, fashion, and smart home essentials with fast express worldwide delivery at GENZ.">
+        content="Discover the GENZ Wide-Leg Pants Collection: premium heavyweight denim, signature relaxed drapes, and uncompromising modern streetwear aesthetics.">
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline';">
@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -26,13 +26,14 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
     <!-- Clerk JS SDK -->
     <script async crossorigin="anonymous"
         data-clerk-publishable-key="pk_test_c2luZ3VsYXItbGlvbmZpc2gtNDMwNS5jbGVyay5hY2NvdW50cy5kZXYk"
         src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@5/dist/clerk.browser.js" type="text/javascript"></script>
 </head>
 
-<body class="has-hero">
+<body>
 
     <!--========== HEADER / NAVBAR ==========-->
     <header id="mainHeader">
@@ -122,9 +123,9 @@
             <div class="drawer-section">
                 <span class="drawer-section-title">EXPLORE</span>
                 <ul class="drawer-list">
-                    <li><a href="index.html" class="active"><span>Home</span><i
+                    <li><a href="index.html"><span>Home</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="wide-leg-pants.html" class="active"><span>Wide-Leg Pants</span><i
                                 class="fa-solid fa-chevron-right"></i></a></li>
-                    <li><a href="shop.html"><span>Shop All</span><i class="fa-solid fa-chevron-right"></i></a></li>
                     <li><a href="about.html"><span>About GENZ</span><i class="fa-solid fa-chevron-right"></i></a></li>
                     <li><a href="contact.html"><span>Contact Concierge</span><i
                                 class="fa-solid fa-chevron-right"></i></a></li>
@@ -158,115 +159,135 @@
         </aside>
     </header>
 
-    <!--========== HERO SECTION ==========-->
-    <section class="premium-hero">
-        <!-- Ambient lighting & depth vignette -->
-        <div class="hero-ambient-depth" aria-hidden="true"></div>
-
-        <!-- Character stage with realistic ground contact shadow & lookbook tags -->
-        <div class="hero-character-stage">
-            <div class="hero-character-shadow" aria-hidden="true"></div>
-            <div class="hero-character-wrap">
-                <img src="Images/hero-character.png" alt="GENZ Model" class="hero-character-img" fetchpriority="high"
-                    loading="eager" decoding="async">
-            </div>
-
-        </div>
-
-        <div class="hero-inner">
-            <div class="hero-tagline">
-                <p class="hero-subtitle">FASHION<br>THAT MOVES<br><span class="subtitle-accent">WITH YOU.</span></p>
-                <div class="hero-subtitle-line"></div>
-            </div>
-
-            <div class="hero-brand-text">
-                <span class="hero-brand-left">HEY</span>
-                <span class="hero-brand-right">GENZ</span>
-            </div>
-
-            <div class="hero-footer-bar">
-                <div class="hero-cta-row">
-                    <a href="shop.html" class="hero-btn-primary">
-                        <span>SHOP DROP</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="contact.html" class="hero-btn-secondary">
-                        <i class="fa-regular fa-compass"></i>
-                        <span>ENQUIRE</span>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!--========== SHOP CATEGORIES SHOWCASE ==========-->
-    <section class="categories" id="categories">
+    <!--========== WIDE-LEG PANTS SHOWCASE PAGE ==========-->
+    <main class="wide-leg-page">
         <div class="container">
-            <div class="section-heading">
-                <h2>Shop by <span>Category</span></h2>
-                <p>Pure minimal streetwear aesthetics engineered with uncompromising craftsmanship.</p>
+
+            <!-- Editorial Breadcrumb -->
+            <div class="wide-leg-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <a href="index.html#categories">Collections</a>
+                <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <span>Wide-Leg Pants</span>
             </div>
 
-            <div class="category-grid">
-                <!-- 1. T-Shirts -->
-                <div class="shop-category-item">
-                    <div class="shop-category-img-box">
-                        <img src="Images/cat-tshirt.png" alt="T-Shirts" class="shop-category-img" loading="lazy">
-                    </div>
-                    <h3 class="shop-category-name">T-SHIRTS</h3>
-                    <a href="/shop/t-shirts" class="shop-now-btn" onclick="if(location.protocol==='file:'){event.preventDefault();window.location.href='shop/t-shirts/index.html';}">
-                        <span>SHOP NOW</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- 2. Shirts -->
-                <div class="shop-category-item">
-                    <div class="shop-category-img-box">
-                        <img src="Images/cat-shirt.png" alt="Shirts" class="shop-category-img" loading="lazy">
-                    </div>
-                    <h3 class="shop-category-name">SHIRTS</h3>
-                    <a href="shop.html?category=fashion" class="shop-now-btn">
-                        <span>SHOP NOW</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- 3. Wide-Leg Pants -->
-                <div class="shop-category-item">
-                    <div class="shop-category-img-box">
-                        <img src="Images/cat-pants.png" alt="Wide-Leg Pants" class="shop-category-img" loading="lazy">
-                    </div>
-                    <h3 class="shop-category-name">WIDE-LEG PANTS</h3>
-                    <a href="wide-leg-pants.html" class="shop-now-btn">
-                        <span>SHOP NOW</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- 4. Hoodies & Sweatshirts -->
-                <div class="shop-category-item">
-                    <div class="shop-category-img-box">
-                        <img src="Images/cat-hoodie.png" alt="Hoodies & Sweatshirts" class="shop-category-img"
-                            loading="lazy">
-                    </div>
-                    <h3 class="shop-category-name">HOODIES & SWEATSHIRTS</h3>
-                    <a href="shop.html?category=fashion" class="shop-now-btn">
-                        <span>SHOP NOW</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
+            <!-- Collection Header -->
+            <div class="wide-leg-header">
+                <h1>Wide-Leg <span>Pants</span></h1>
             </div>
 
-            <div class="categories-button">
-                <a href="shop.html">
-                    <span>View Complete Store Catalog</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+            <!-- Products Grid: 4 columns in 1 row on Desktop; 1 column in 4 rows on Tablet & Mobile -->
+            <div class="wide-leg-grid" id="wideLegGrid">
+
+                <!-- 1. Black Cargo Wide-Leg Jeans (₹899) -->
+                <article class="wide-leg-card" data-id="pant-1">
+                    <div class="wide-leg-img-box">
+                        <button type="button" class="wide-leg-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('pant-1'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="product.html?id=pant-1" onclick="selectProduct('pant-1')">
+                            <img src="Images/pant-1.png" alt="Black Cargo Wide-Leg Jeans" class="wide-leg-img" fetchpriority="high" loading="eager">
+                        </a>
+                    </div>
+                    <div class="wide-leg-body">
+                        <span class="wide-leg-category-tag">WIDE-LEG PANTS</span>
+                        <h3 class="wide-leg-title">
+                            <a href="product.html?id=pant-1" onclick="selectProduct('pant-1')">Black Cargo Wide-Leg Jeans</a>
+                        </h3>
+                        <div class="wide-leg-price-row">
+                            <span class="wide-leg-price">₹899</span>
+                            <span class="wide-leg-orig-price">₹1,299</span>
+                        </div>
+                        <a href="product.html?id=pant-1" onclick="selectProduct('pant-1')" class="wide-leg-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 2. Faded Black Wide-Leg Jeans (₹999) -->
+                <article class="wide-leg-card" data-id="pant-2">
+                    <div class="wide-leg-img-box">
+                        <button type="button" class="wide-leg-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('pant-2'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="product.html?id=pant-2" onclick="selectProduct('pant-2')">
+                            <img src="Images/pant-2.png" alt="Faded Black Wide-Leg Jeans" class="wide-leg-img" loading="eager">
+                        </a>
+                    </div>
+                    <div class="wide-leg-body">
+                        <span class="wide-leg-category-tag">WIDE-LEG PANTS</span>
+                        <h3 class="wide-leg-title">
+                            <a href="product.html?id=pant-2" onclick="selectProduct('pant-2')">Faded Black Wide-Leg Jeans</a>
+                        </h3>
+                        <div class="wide-leg-price-row">
+                            <span class="wide-leg-price">₹999</span>
+                            <span class="wide-leg-orig-price">₹1,499</span>
+                        </div>
+                        <a href="product.html?id=pant-2" onclick="selectProduct('pant-2')" class="wide-leg-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 3. Vintage Blue Wide-Leg Jeans (₹1,099) -->
+                <article class="wide-leg-card" data-id="pant-3">
+                    <div class="wide-leg-img-box">
+                        <button type="button" class="wide-leg-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('pant-3'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="product.html?id=pant-3" onclick="selectProduct('pant-3')">
+                            <img src="Images/pant-3.png" alt="Vintage Blue Wide-Leg Jeans" class="wide-leg-img" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="wide-leg-body">
+                        <span class="wide-leg-category-tag">WIDE-LEG PANTS</span>
+                        <h3 class="wide-leg-title">
+                            <a href="product.html?id=pant-3" onclick="selectProduct('pant-3')">Vintage Blue Wide-Leg Jeans</a>
+                        </h3>
+                        <div class="wide-leg-price-row">
+                            <span class="wide-leg-price">₹1,099</span>
+                            <span class="wide-leg-orig-price">₹1,599</span>
+                        </div>
+                        <a href="product.html?id=pant-3" onclick="selectProduct('pant-3')" class="wide-leg-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 4. Light Wash Graphic Wide-Leg Jeans (₹999) -->
+                <article class="wide-leg-card" data-id="pant-4">
+                    <div class="wide-leg-img-box">
+                        <button type="button" class="wide-leg-fav-btn" onclick="event.preventDefault(); toggleWishlist(getProductById('pant-4'), this);" aria-label="Add to Wishlist" title="Save to Wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <a href="product.html?id=pant-4" onclick="selectProduct('pant-4')">
+                            <img src="Images/pant-4.png" alt="Light Wash Graphic Wide-Leg Jeans" class="wide-leg-img" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="wide-leg-body">
+                        <span class="wide-leg-category-tag">WIDE-LEG PANTS</span>
+                        <h3 class="wide-leg-title">
+                            <a href="product.html?id=pant-4" onclick="selectProduct('pant-4')">Light Wash Graphic Wide-Leg Jeans</a>
+                        </h3>
+                        <div class="wide-leg-price-row">
+                            <span class="wide-leg-price">₹999</span>
+                            <span class="wide-leg-orig-price">₹1,399</span>
+                        </div>
+                        <a href="product.html?id=pant-4" onclick="selectProduct('pant-4')" class="wide-leg-btn">
+                            <span>VIEW PRODUCT</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
             </div>
+
         </div>
-    </section>
+    </main>
 
     <!--========== FOOTER ==========-->
     <footer class="footer">
@@ -276,8 +297,8 @@
                     GENZ<span style="color:#2563eb;">.</span>
                 </a>
                 <p>
-                    Your premier global destination for luxury lifestyle products, cutting-edge audio, artisan leather
-                    accessories, and modern home essentials.
+                    Your premier global destination for luxury lifestyle products, cutting-edge streetwear, artisan leather
+                    accessories, and modern apparel essentials.
                 </p>
                 <div class="footer-socials">
                     <a href="https://instagram.com/amarrr.ey" target="_blank" rel="noopener noreferrer"
@@ -295,7 +316,7 @@
                 <h3>Quick Navigation</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop Catalog</a></li>
+                    <li><a href="wide-leg-pants.html">Wide-Leg Pants</a></li>
                     <li><a href="about.html">About Brand</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="wishlist.html">My Wishlist</a></li>
@@ -343,6 +364,21 @@
     <!-- Core Scripts -->
     <script src="js/api.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Synchronize wishlist heart states on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const wishlist = typeof getWishlist === 'function' ? getWishlist() : [];
+            document.querySelectorAll('.wide-leg-card').forEach(card => {
+                const id = card.dataset.id;
+                const btn = card.querySelector('.wide-leg-fav-btn');
+                if (btn && wishlist.some(i => String(i.id) === String(id))) {
+                    btn.classList.add('active');
+                    const icon = btn.querySelector('i');
+                    if (icon) icon.className = 'fa-solid fa-heart';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

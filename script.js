@@ -9,6 +9,142 @@
 
 const DEFAULT_PRODUCTS = [
     {
+        id: 'pant-1',
+        title: 'Black Cargo Wide-Leg Jeans',
+        price: 899.00,
+        originalPrice: 1299.00,
+        currency: 'INR',
+        image: 'Images/pant-1.png',
+        category: 'wide-leg-pants',
+        badge: '',
+        rating: 4.9,
+        reviews: 128,
+        inStock: true,
+        sizes: ['28', '30', '32', '34', '36'],
+        description: 'Heavyweight black denim cargo wide-leg jeans engineered with tactical deep 3D flap pockets, contrast stitching, relaxed oversized silhouette, and high-grade metal zip fly.',
+        specs: ['Material: 100% Rigid Heavyweight Cotton Denim (14.5oz)', 'Fit: Extreme Wide-Leg Oversized Cut with Relaxed Leg Break', 'Details: Multi-Utility 3D Cargo Flap Pockets with Snap Hardware', 'Wash: Mineral Washed Vintage Black', 'Care: Machine Wash Cold Inside Out'],
+        colors: ['#111827', '#374151']
+    },
+    {
+        id: 'pant-2',
+        title: 'Faded Black Wide-Leg Jeans',
+        price: 999.00,
+        originalPrice: 1499.00,
+        currency: 'INR',
+        image: 'Images/pant-2.png',
+        category: 'wide-leg-pants',
+        badge: '',
+        rating: 4.8,
+        reviews: 96,
+        inStock: true,
+        sizes: ['28', '30', '32', '34', '36'],
+        description: 'Signature faded black wide-leg jeans featuring natural thigh whiskering, relaxed drape, reinforced inseam stitching, and authentic streetwear vintage fade.',
+        specs: ['Material: 100% Premium Ring-Spun Cotton Denim', 'Fit: Relaxed Wide-Leg Flare Drop', 'Finish: Hand-Distressed Faded Charcoal Treatment', 'Rise: Mid-to-High Rise with Tailored Waistband', 'Pockets: Classic 5-Pocket Design'],
+        colors: ['#1f2937', '#111827']
+    },
+    {
+        id: 'pant-3',
+        title: 'Vintage Blue Wide-Leg Jeans',
+        price: 1099.00,
+        originalPrice: 1599.00,
+        currency: 'INR',
+        image: 'Images/pant-3.png',
+        category: 'wide-leg-pants',
+        badge: '',
+        rating: 4.9,
+        reviews: 154,
+        inStock: true,
+        sizes: ['28', '30', '32', '34', '36'],
+        description: 'Authentic vintage wash wide-leg denim pants tailored with classic 90s aesthetic, subtle leg break drape, five-pocket styling, and durable double-needle stitching.',
+        specs: ['Material: 14oz Heritage Indigo Cotton Denim', 'Fit: True Oversized Wide-Leg Silhouette', 'Wash: Sun-Drenched Vintage Stonewash Indigo', 'Closure: Custom Embossed GENZ Shank Button & Heavy-Duty Brass Zipper', 'Hem: Clean Tailored Raw-Edge Finished Hem'],
+        colors: ['#3b82f6', '#1e40af']
+    },
+    {
+        id: 'pant-4',
+        title: 'Light Wash Graphic Wide-Leg Jeans',
+        price: 999.00,
+        originalPrice: 1399.00,
+        currency: 'INR',
+        image: 'Images/pant-4.png',
+        category: 'wide-leg-pants',
+        badge: '',
+        rating: 4.8,
+        reviews: 82,
+        inStock: true,
+        sizes: ['28', '30', '32', '34', '36'],
+        description: 'Statement light wash wide-leg jeans showcasing customized urban graphic embroidery, ultra-relaxed fit, soft tactile touch, and clean bottom cuffs.',
+        specs: ['Material: 100% Softened Indigo Denim', 'Fit: Relaxed Wide-Leg Skater Cut', 'Details: Screenprinted & Embroidered Streetwear Accents', 'Hardware: Custom Embossed GENZ Metal Rivets', 'Comfort: Pre-Shrunk Breathable All-Day Fabric'],
+        colors: ['#93c5fd', '#60a5fa']
+    },
+    {
+        id: 'tshirt-1',
+        title: 'Black Tribal Embroidered Oversized T-Shirt',
+        price: 899.00,
+        originalPrice: 1299.00,
+        currency: 'INR',
+        image: 'Images/t-shirt 1.png',
+        category: 't-shirts',
+        badge: 'NEW',
+        rating: 4.9,
+        reviews: 142,
+        inStock: true,
+        sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+        description: 'Heavyweight black cotton oversized t-shirt featuring intricate tribal cyber-y2k embroidery across the chest and sleeves, drop shoulder silhouette, and vintage acid mineral wash.',
+        specs: ['Material: 100% Combed Heavyweight Cotton (240 GSM)', 'Fit: Boxy Oversized Streetwear Fit', 'Embroidery: High-Density Metallic Silver & Off-White Tribal Stitching', 'Wash: Mineral Washed Vintage Black', 'Care: Cold Machine Wash Inside Out'],
+        colors: ['#111827', '#374151']
+    },
+    {
+        id: 'tshirt-2',
+        title: 'Cream Varsity Embroidered Polo T-Shirt',
+        price: 999.00,
+        originalPrice: 1499.00,
+        currency: 'INR',
+        image: 'Images/t-shirt 2.png',
+        category: 't-shirts',
+        badge: 'HOT',
+        rating: 4.8,
+        reviews: 118,
+        inStock: true,
+        sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+        description: 'Signature cream textured knit polo t-shirt with chocolate brown varsity collar, button placket, embossed G collegiate patch, and contrast sleeve athletic stripes.',
+        specs: ['Material: 100% Textured Waffle Knit Cotton', 'Fit: Relaxed Retro Polo Fit', 'Details: Chenille Varsity Letter Patch & Star Embroidery', 'Collar: Ribbed Contrast Spread Collar with 3-Button Placket', 'Care: Dry Clean or Gentle Hand Wash'],
+        colors: ['#fef3c7', '#78350f']
+    },
+    {
+        id: 'tshirt-3',
+        title: 'White Graphic Oversized T-Shirt',
+        price: 799.00,
+        originalPrice: 1199.00,
+        currency: 'INR',
+        image: 'Images/t-shirt 3.png',
+        category: 't-shirts',
+        badge: 'BESTSELLER',
+        rating: 4.9,
+        reviews: 164,
+        inStock: true,
+        sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+        description: 'Urban oversized t-shirt styled with intricate dragon embroidery, utilitarian chest cargo flap pocket, brass frog-button closures, and vintage washed olive-charcoal drape.',
+        specs: ['Material: 100% Ring-Spun Premium Washed Cotton', 'Fit: Dropped Shoulder Oversized Drapes', 'Graphics: Detailed Mythical Dragon Embroidery with Cloud Motifs', 'Hardware: Antique Brass Frog Fasteners on Flap Pocket', 'Care: Machine Wash Delicate'],
+        colors: ['#1f2937', '#e5e7eb']
+    },
+    {
+        id: 'tshirt-4',
+        title: 'Black & Cream Patchwork Embroidered T-Shirt',
+        price: 1099.00,
+        originalPrice: 1599.00,
+        currency: 'INR',
+        image: 'Images/t-shirt 4.png',
+        category: 't-shirts',
+        badge: 'LIMITED',
+        rating: 4.9,
+        reviews: 95,
+        inStock: true,
+        sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+        description: 'Asymmetrical two-tone patchwork t-shirt uniting washed black denim and off-white canvas with gothic star embroidery, tactical D-ring utility pocket, and raw-edge seam accents.',
+        specs: ['Material: Dual-Tone Multi-Panel Heavyweight Cotton', 'Fit: Custom Oversized Gen-Z Aesthetic Cut', 'Details: Utility Flap Pocket with Metal D-Ring Hardware', 'Accents: Chrome-Style Gothic Cross and Star Embroidery', 'Care: Machine Wash Cold Inside Out'],
+        colors: ['#111827', '#f8fafc']
+    },
+    {
         id: '1',
         title: 'Premium Classic Chrono Watch',
         price: 129.00,
@@ -337,6 +473,30 @@ function escapeHtml(str) {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+}
+
+function formatProductPrice(productOrPrice, currency = null) {
+    if (typeof productOrPrice === 'object' && productOrPrice !== null) {
+        let curr = productOrPrice.currency;
+        if (!curr) {
+            const prodId = String(productOrPrice.id || '');
+            if (productOrPrice.category === 'wide-leg-pants' || productOrPrice.category === 't-shirts' || prodId.startsWith('tshirt-') || prodId.startsWith('pant-')) {
+                curr = 'INR';
+            } else {
+                const fullProd = productOrPrice.id ? getProductById(productOrPrice.id) : null;
+                curr = (fullProd && (fullProd.currency === 'INR' || fullProd.category === 'wide-leg-pants' || fullProd.category === 't-shirts')) ? 'INR' : 'USD';
+            }
+        }
+        const price = parseFloat(productOrPrice.price || 0);
+        if (curr === 'INR' || curr === '₹') {
+            return `₹${Math.round(price).toLocaleString('en-IN')}`;
+        }
+        return `$${price.toFixed(2)}`;
+    }
+    if (currency === 'INR' || currency === '₹') {
+        return `₹${Math.round(Number(productOrPrice || 0)).toLocaleString('en-IN')}`;
+    }
+    return `$${Number(productOrPrice || 0).toFixed(2)}`;
 }
 
 function getProductById(id) {
@@ -902,7 +1062,7 @@ function showToast(message, icon = 'fa-circle-check') {
 
 function addToCart(product) {
     let cart = getCart();
-    const existing = cart.find(item => String(item.id) === String(product.id));
+    const existing = cart.find(item => String(item.id) === String(product.id) && (!product.size || item.size === product.size));
 
     if (existing) {
         existing.qty += (product.qty || 1);
@@ -913,7 +1073,10 @@ function addToCart(product) {
             price: parseFloat(product.price),
             image: product.image,
             qty: product.qty || 1,
-            color: product.color || 'Standard'
+            color: product.color || 'Standard',
+            size: product.size || null,
+            currency: product.currency || ((product.category === 'wide-leg-pants' || product.category === 't-shirts') ? 'INR' : 'USD'),
+            category: product.category || ''
         });
     }
 
@@ -972,6 +1135,7 @@ function clearCart() {
 // ==================================================
 
 function toggleWishlist(product, buttonEl) {
+    if (!product) return;
     let wishlist = getWishlist();
     const index = wishlist.findIndex(item => String(item.id) === String(product.id));
 
@@ -989,6 +1153,8 @@ function toggleWishlist(product, buttonEl) {
             id: String(product.id || Date.now()),
             title: product.title,
             price: parseFloat(product.price),
+            currency: product.currency || ((product.category === 'wide-leg-pants' || product.category === 't-shirts') ? 'INR' : 'USD'),
+            category: product.category || '',
             image: product.image,
             badge: product.badge || 'NEW'
         });
@@ -1001,6 +1167,10 @@ function toggleWishlist(product, buttonEl) {
         }
     }
 
+    if (typeof syncWishlistShowcase === 'function') {
+        syncWishlistShowcase();
+    }
+
     if (window.location.pathname.includes('wishlist.html')) {
         renderWishlistPage();
     }
@@ -1011,6 +1181,9 @@ function removeFromWishlist(id) {
     wishlist = wishlist.filter(item => String(item.id) !== String(id));
     saveWishlist(wishlist);
     showToast('Removed item from Wishlist', 'fa-trash-can');
+    if (typeof syncWishlistShowcase === 'function') {
+        syncWishlistShowcase();
+    }
     if (window.location.pathname.includes('wishlist.html')) {
         renderWishlistPage();
     }
@@ -1085,8 +1258,8 @@ function renderProductCardHtml(p) {
                 </div>
                 <div class="product-bottom">
                     <div class="product-price">
-                        $${p.price.toFixed(2)}
-                        ${p.originalPrice ? `<small>$${p.originalPrice.toFixed(2)}</small>` : ''}
+                        ${formatProductPrice(p)}
+                        ${p.originalPrice ? `<small>${formatProductPrice(p.originalPrice, p.currency)}</small>` : ''}
                     </div>
                     <button class="add-cart" onclick="addToCart(getProductById('${cleanId}'))" aria-label="Add to cart">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -1121,6 +1294,21 @@ function initPageModules() {
     } else if (path.includes('login.html')) {
         initLoginPage();
     }
+
+    // Synchronize showcase collection cards (T-Shirts and Wide-Leg Pants) wishlist states
+    const wishlist = getWishlist();
+    document.querySelectorAll('.wide-leg-card, .tshirts-card').forEach(card => {
+        const id = card.dataset.id;
+        const btn = card.querySelector('.wide-leg-fav-btn, .tshirts-fav-btn');
+        if (id && btn) {
+            const isWishlisted = wishlist.some(i => String(i.id) === String(id));
+            btn.classList.toggle('active', isWishlisted);
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.className = isWishlisted ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
+            }
+        }
+    });
 }
 
 // --------------------------------------------------
@@ -1311,19 +1499,84 @@ function initProductPage() {
     const thumbnailRow = document.getElementById('thumbnailRow');
     const specsList = document.getElementById('specsList');
 
+    const isINR = product.currency === 'INR' || product.category === 'wide-leg-pants' || product.category === 't-shirts';
     if (mainImg) {
         mainImg.src = product.image;
         mainImg.alt = product.title;
     }
     if (titleEl) titleEl.textContent = product.title;
-    if (priceEl) priceEl.textContent = `$${product.price.toFixed(2)}`;
-    if (origPriceEl) origPriceEl.textContent = product.originalPrice ? `$${product.originalPrice.toFixed(2)}` : '';
+    if (priceEl) priceEl.textContent = formatProductPrice(product);
+    if (origPriceEl) origPriceEl.textContent = product.originalPrice ? (isINR ? `₹${Math.round(product.originalPrice).toLocaleString('en-IN')}` : `$${product.originalPrice.toFixed(2)}`) : '';
     if (descEl) descEl.textContent = product.description;
-    if (categorySpan) categorySpan.textContent = `PREMIUM ${product.category.toUpperCase()}`;
+    if (categorySpan) {
+        if (product.category === 'wide-leg-pants') {
+            categorySpan.textContent = 'WIDE-LEG PANTS';
+        } else if (product.category === 't-shirts') {
+            categorySpan.textContent = 'T-SHIRTS';
+        } else {
+            categorySpan.textContent = `PREMIUM ${product.category.toUpperCase()}`;
+        }
+    }
+    const breadcrumbShop = document.getElementById('productBreadcrumbShop');
+    if (breadcrumbShop) {
+        if (product.category === 'wide-leg-pants') {
+            breadcrumbShop.textContent = 'Wide-Leg Pants';
+            breadcrumbShop.href = 'wide-leg-pants.html';
+        } else if (product.category === 't-shirts') {
+            breadcrumbShop.textContent = 'T-Shirts';
+            breadcrumbShop.href = window.location.protocol === 'file:' ? 'shop/t-shirts/index.html' : '/shop/t-shirts';
+        } else {
+            breadcrumbShop.textContent = 'Collections';
+            breadcrumbShop.href = 'index.html#categories';
+        }
+    }
 
     if (ratingEl) {
         const stars = '★'.repeat(Math.floor(product.rating || 5));
         ratingEl.innerHTML = `${stars} <span style="color:#64748b; font-size:14px; font-weight:600;">(${product.reviews || 120} Customer Reviews)</span>`;
+    }
+
+    // Size Selector
+    const sizeBox = document.getElementById('productSizeBox');
+    const sizeGroup = document.getElementById('productSizeGroup');
+    const sizeLabel = document.getElementById('selectedSizeLabel');
+    const availableSizes = product.sizes || (product.category === 'wide-leg-pants' ? ['28', '30', '32', '34', '36'] : (product.category === 't-shirts' ? ['S', 'M', 'L', 'XL', 'XXL'] : null));
+    let selectedSize = availableSizes && availableSizes.length > 0 ? availableSizes[0] : null;
+
+    if (availableSizes && availableSizes.length > 0) {
+        if (sizeBox) sizeBox.style.display = 'block';
+        if (sizeGroup) {
+            sizeGroup.innerHTML = availableSizes.map((s, idx) => `
+                <button type="button" class="size-pill-btn ${idx === 0 ? 'active' : ''}" data-size="${s}">${s}</button>
+            `).join('');
+            if (sizeLabel) sizeLabel.textContent = `Size: ${selectedSize}`;
+            sizeGroup.querySelectorAll('.size-pill-btn').forEach(btn => {
+                btn.onclick = () => {
+                    sizeGroup.querySelectorAll('.size-pill-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedSize = btn.dataset.size;
+                    if (sizeLabel) sizeLabel.textContent = `Size: ${selectedSize}`;
+                };
+            });
+        }
+    } else if (sizeBox) {
+        sizeBox.style.display = 'none';
+    }
+
+    // Product Details Favourite Button
+    const favBtn = document.getElementById('productFavBtn');
+    if (favBtn) {
+        const updateFavBtnState = () => {
+            const wishlist = getWishlist();
+            const isWishlisted = wishlist.some(i => String(i.id) === String(product.id));
+            favBtn.innerHTML = isWishlisted ? '<i class="fa-solid fa-heart" style="color:#ef4444;"></i>' : '<i class="fa-regular fa-heart"></i>';
+            favBtn.classList.toggle('active', isWishlisted);
+        };
+        updateFavBtnState();
+        favBtn.onclick = () => {
+            toggleWishlist(product, favBtn);
+            updateFavBtnState();
+        };
     }
 
     // Thumbnails
@@ -1368,6 +1621,7 @@ function initProductPage() {
         cartBtn.onclick = () => {
             addToCart({
                 ...product,
+                size: selectedSize,
                 qty: parseInt(qtyInput ? qtyInput.value : 1)
             });
         };
@@ -1377,6 +1631,7 @@ function initProductPage() {
         buyBtn.onclick = () => {
             addToCart({
                 ...product,
+                size: selectedSize,
                 qty: parseInt(qtyInput ? qtyInput.value : 1)
             });
             window.location.href = 'checkout.html';
@@ -1456,7 +1711,11 @@ function initProductPage() {
     // Related products
     const relatedGrid = document.querySelector('.product-grid');
     if (relatedGrid) {
-        const related = DEFAULT_PRODUCTS.filter(p => String(p.id) !== String(product.id)).slice(0, 4);
+        let related = DEFAULT_PRODUCTS.filter(p => p.category === product.category && String(p.id) !== String(product.id)).slice(0, 4);
+        if (related.length < 4) {
+            const others = DEFAULT_PRODUCTS.filter(p => String(p.id) !== String(product.id) && !related.some(r => r.id === p.id)).slice(0, 4 - related.length);
+            related = related.concat(others);
+        }
         relatedGrid.innerHTML = related.map(p => renderProductCardHtml(p)).join('');
     }
 }
@@ -1502,7 +1761,7 @@ function renderCartPage() {
                 <img src="${item.image}" alt="${escapeHtml(item.title)}" style="width:90px; height:90px; object-fit:contain; border-radius:12px; background:#f8fafc; padding:8px; border:1px solid #f1f5f9;">
                 <div class="cart-info" style="flex:1;">
                     <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-bottom:4px;">${escapeHtml(item.title)}</h3>
-                    <p style="font-weight:700; color:#2563eb; font-size:15px; margin-bottom:10px;">$${item.price.toFixed(2)}</p>
+                    <p style="font-weight:700; color:#2563eb; font-size:15px; margin-bottom:10px;">${formatProductPrice(item)} ${item.size ? `<span style="display:inline-block; font-size:12px; background:#f1f5f9; color:#475569; padding:2px 8px; border-radius:6px; margin-left:6px;">Size: ${escapeHtml(item.size)}</span>` : ''}</p>
                     <div class="cart-quantity" style="display:inline-flex; align-items:center; background:#f1f5f9; border:1px solid #e2e8f0; border-radius:8px; padding:2px;">
                         <button onclick="changeQty(-1, ${idx})" style="width:30px; height:30px; border:none; background:#fff; border-radius:6px; cursor:pointer; font-weight:700; color:#0f172a;">-</button>
                         <span id="qty${idx}" style="font-weight:800; font-size:14px; width:34px; text-align:center;">${item.qty}</span>
@@ -1510,7 +1769,7 @@ function renderCartPage() {
                     </div>
                 </div>
                 <div style="text-align:right;">
-                    <strong style="font-size:18px; font-weight:800; color:#0f172a; display:block; margin-bottom:10px;">$${itemTotal.toFixed(2)}</strong>
+                    <strong style="font-size:18px; font-weight:800; color:#0f172a; display:block; margin-bottom:10px;">${formatProductPrice(itemTotal, item.currency)}</strong>
                     <button class="remove-btn" onclick="removeFromCart('${item.id}')" style="background:none; border:none; color:#ef4444; cursor:pointer; font-weight:600; font-size:13px; display:inline-flex; align-items:center; gap:6px;">
                         <i class="fa-solid fa-trash-can"></i> Remove
                     </button>
@@ -1545,16 +1804,17 @@ function renderCartPage() {
     const tax = subtotal > 0 ? 18.00 : 0.00;
     const total = Math.max(0, subtotal - discountAmount + tax);
 
-    if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    const isCartINR = cart.some(i => i.currency === 'INR' || i.category === 'wide-leg-pants' || i.category === 't-shirts');
+    if (subtotalEl) subtotalEl.textContent = isCartINR ? formatProductPrice(subtotal, 'INR') : `$${subtotal.toFixed(2)}`;
     if (discountEl) {
         discountEl.innerHTML = discount.rate > 0 ? `
             <div style="display:flex; justify-content:space-between; margin-bottom:15px; color:#10b981; font-weight:700; font-size:15px;">
                 <span>Discount (${discount.code})</span>
-                <span>-$${discountAmount.toFixed(2)}</span>
+                <span>-${isCartINR ? formatProductPrice(discountAmount, 'INR') : `$${discountAmount.toFixed(2)}`}</span>
             </div>
         ` : '';
     }
-    if (totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
+    if (totalEl) totalEl.textContent = isCartINR ? formatProductPrice(total, 'INR') : `$${total.toFixed(2)}`;
 
     // Coupon Handler
     const couponBtn = document.querySelector('.coupon-btn');
@@ -1610,7 +1870,7 @@ function renderCheckoutPage() {
                         <p style="font-size:12px; color:#64748b; margin:0;">Qty: ${item.qty}</p>
                     </div>
                 </div>
-                <span style="font-weight:700; color:#0f172a;">$${(item.price * item.qty).toFixed(2)}</span>
+                <span style="font-weight:700; color:#0f172a;">${formatProductPrice(item.price * item.qty, item.currency)}</span>
             </div>
         `;
     }).join('');
@@ -1635,8 +1895,9 @@ function renderCheckoutPage() {
     const subtotalSpans = summaryContainer.querySelectorAll('.summary-line:nth-of-type(1) span:last-child');
     const totalSpans = summaryContainer.querySelectorAll('.summary-line.total span:last-child');
 
-    subtotalSpans.forEach(s => s.textContent = `$${subtotal.toFixed(2)}`);
-    totalSpans.forEach(s => s.textContent = `$${total.toFixed(2)}`);
+    const isCartINR = cart.some(i => i.currency === 'INR' || i.category === 'wide-leg-pants' || i.category === 't-shirts');
+    subtotalSpans.forEach(s => s.textContent = isCartINR ? formatProductPrice(subtotal, 'INR') : `$${subtotal.toFixed(2)}`);
+    totalSpans.forEach(s => s.textContent = isCartINR ? formatProductPrice(total, 'INR') : `$${total.toFixed(2)}`);
 
     // Payment Option Selectors
     const paymentLabels = document.querySelectorAll('.payment-method label');
@@ -1798,7 +2059,7 @@ function renderWishlistPage() {
             </a>
             <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-bottom:8px;">${escapeHtml(item.title)}</h3>
             <div class="rating" style="color:#f59e0b; margin-bottom:10px; font-size:14px;">★★★★★</div>
-            <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:16px;">$${parseFloat(item.price).toFixed(2)}</h2>
+            <h2 style="font-size:20px; font-weight:800; color:#0f172a; margin-bottom:16px;">${formatProductPrice(item)}</h2>
             <div class="wishlist-buttons" style="display:flex; gap:10px;">
                 <button class="move-cart" onclick="moveWishlistItemToCart('${item.id}')" style="flex:1; padding:12px; background:#2563eb; color:#fff; border:none; border-radius:8px; font-weight:700; cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center; gap:6px;">
                     <i class="fa-solid fa-cart-shopping"></i> Move to Cart

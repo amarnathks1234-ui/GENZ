@@ -152,6 +152,27 @@
         grid-template-columns: 1fr;
         gap: 24px;
     }
+
+    /* Wide-Leg Pants & T-Shirts Collections on Tablet: 1 Single Column / 4 Rows */
+    .wide-leg-grid,
+    .tshirts-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        max-width: 580px !important;
+        margin: 0 auto !important;
+    }
+
+    .wide-leg-img-box,
+    .tshirts-img-box {
+        aspect-ratio: auto !important;
+        height: 480px !important;
+        padding: 20px !important;
+    }
+
+    .wide-leg-img,
+    .tshirts-img {
+        max-height: 440px !important;
+    }
 }
 
 /* ==================================================
@@ -1189,6 +1210,31 @@
         padding: 0 2px;
         border: 1.5px solid #ffffff;
     }
+
+    /* Wide-Leg Pants & T-Shirts Collections on Mobile: 1 Single Column / 4 Rows */
+    .wide-leg-breadcrumb,
+    .tshirts-breadcrumb {
+        display: none !important;
+    }
+
+    .wide-leg-grid,
+    .tshirts-grid {
+        grid-template-columns: 1fr !important;
+        gap: 26px !important;
+        max-width: 100% !important;
+    }
+
+    .wide-leg-img-box,
+    .tshirts-img-box {
+        aspect-ratio: auto !important;
+        height: 440px !important;
+        padding: 16px !important;
+    }
+
+    .wide-leg-img,
+    .tshirts-img {
+        max-height: 400px !important;
+    }
 }
 
 /* ==================================================
@@ -1256,5 +1302,16 @@
         max-height: calc(100vh - 150px);
         max-height: calc(100dvh - 150px);
         max-width: min(340px, 86vw);
+    }
+
+    .wide-leg-img-box,
+    .tshirts-img-box {
+        height: 380px !important;
+        padding: 12px !important;
+    }
+
+    .wide-leg-img,
+    .tshirts-img {
+        max-height: 340px !important;
     }
 }
