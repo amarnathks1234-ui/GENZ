@@ -1524,7 +1524,7 @@ function initProductPage() {
             breadcrumbShop.href = 'wide-leg-pants.html';
         } else if (product.category === 't-shirts') {
             breadcrumbShop.textContent = 'T-Shirts';
-            breadcrumbShop.href = window.location.protocol === 'file:' ? 'shop/t-shirts/index.html' : '/shop/t-shirts';
+            breadcrumbShop.href = 't-shirts.html';
         } else {
             breadcrumbShop.textContent = 'Collections';
             breadcrumbShop.href = 'index.html#categories';
